@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<name>de.averbis.lifesciences.typesystems.lifesciences.LifeSciencesTypeSystem</name>
+	<description/>
+	<version>${project.version}</version>
+	<vendor>Averbis GmbH</vendor>
+	<imports>
+		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem"/>
+	</imports>
+	<types>
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.AbstractEntity</name>
+			<description>Supertype for all (named) entities.</description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>value</name>
+					<description>Text of annotated mention.</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+                <featureDescription>
+					<name>label</name>
+					<description>The type of the entity; e.g., PERSON, LOCATION etc.
+						Feature name is label due to the fact that "type" is a reserved word.
+					</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+                <featureDescription>
+					<name>concepts</name>
+					<description>Reference to all recognized concepts associated with this entity.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>de.averbis.extraction.types.Concept</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
+				</featureDescription>
+            </features>
+        </typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.CellLine</name>
+			<description>Type representing a cell line.</description>
+			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.Disorder</name>
+			<description>Type representing a disorder (or disease).</description>
+			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.Drug</name>
+			<description>Type representing a drug (or substance or chemical).</description>
+			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.Gene</name>
+			<description>Type representing a gene.</description>
+			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.Species</name>
+			<description>Type representing a species.</description>
+			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+		</typeDescription>
+	</types>
+</typeSystemDescription>
