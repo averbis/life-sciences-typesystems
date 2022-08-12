@@ -60,5 +60,38 @@
 			<description>Type representing a species.</description>
 			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
 		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.AdverseEvent</name>
+			<description>
+                Type representing an adverse event (typically a disease or disorder
+                that can be caused by a drug, chemical, substance).
+            </description>
+			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.Anatomy</name>
+			<description>Type representing an anatomy.</description>
+			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.Device</name>
+			<description>Type representing a device.</description>
+			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.MedicalDeviceManufacturer</name>
+			<description>Type representing a medical device manufacturer.</description>
+			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.StudyDesign</name>
+			<description>Type representing a study design.</description>
+			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.Procedure</name>
+			<description>Type representing a procedure.</description>
+			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+		</typeDescription>
 	</types>
 </typeSystemDescription>
