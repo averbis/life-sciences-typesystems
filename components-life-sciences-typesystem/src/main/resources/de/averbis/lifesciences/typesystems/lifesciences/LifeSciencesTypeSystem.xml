@@ -9,22 +9,10 @@
 	</imports>
 	<types>
 		<typeDescription>
-			<name>de.averbis.lifesciences.types.AbstractEntity</name>
-			<description>Supertype for all (named) entities.</description>
-			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<name>de.averbis.lifesciences.types.LinkedEntity</name>
+			<description>Supertype for all (named) entities with a possible link to concepts.</description>
+			<supertypeName>de.averbis.extraction.types.Entity</supertypeName>
 			<features>
-				<featureDescription>
-					<name>value</name>
-					<description>Text of annotated mention.</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
-                <featureDescription>
-					<name>label</name>
-					<description>The type of the entity; e.g., PERSON, LOCATION etc.
-						Feature name is label due to the fact that "type" is a reserved word.
-					</description>
-					<rangeTypeName>uima.cas.String</rangeTypeName>
-				</featureDescription>
                 <featureDescription>
 					<name>concepts</name>
 					<description>Reference to all recognized concepts associated with this entity.</description>
@@ -38,27 +26,27 @@
 		<typeDescription>
 			<name>de.averbis.lifesciences.types.CellLine</name>
 			<description>Type representing a cell line.</description>
-			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+			<supertypeName>de.averbis.lifesciences.types.LinkedEntity</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.lifesciences.types.Disorder</name>
 			<description>Type representing a disorder (or disease).</description>
-			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+			<supertypeName>de.averbis.lifesciences.types.LinkedEntity</supertypeName>
 		</typeDescription>
 		<typeDescription>
-			<name>de.averbis.lifesciences.types.Drug</name>
-			<description>Type representing a drug (or substance or chemical).</description>
-			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+			<name>de.averbis.lifesciences.types.Substance</name>
+			<description>Type representing a substance (or drug or chemical).</description>
+			<supertypeName>de.averbis.lifesciences.types.LinkedEntity</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.lifesciences.types.Gene</name>
 			<description>Type representing a gene.</description>
-			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+			<supertypeName>de.averbis.lifesciences.types.LinkedEntity</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.lifesciences.types.Species</name>
 			<description>Type representing a species.</description>
-			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+			<supertypeName>de.averbis.lifesciences.types.LinkedEntity</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.lifesciences.types.AdverseEvent</name>
@@ -66,32 +54,32 @@
                 Type representing an adverse event (typically a disease or disorder
                 that can be caused by a drug, chemical, substance).
             </description>
-			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+			<supertypeName>de.averbis.lifesciences.types.LinkedEntity</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.lifesciences.types.Anatomy</name>
 			<description>Type representing an anatomy.</description>
-			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+			<supertypeName>de.averbis.lifesciences.types.LinkedEntity</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.lifesciences.types.Device</name>
 			<description>Type representing a device.</description>
-			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+			<supertypeName>de.averbis.lifesciences.types.LinkedEntity</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.lifesciences.types.MedicalDeviceManufacturer</name>
 			<description>Type representing a medical device manufacturer.</description>
-			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+			<supertypeName>de.averbis.lifesciences.types.LinkedEntity</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.lifesciences.types.StudyDesign</name>
 			<description>Type representing a study design.</description>
-			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+			<supertypeName>de.averbis.lifesciences.types.LinkedEntity</supertypeName>
 		</typeDescription>
 		<typeDescription>
 			<name>de.averbis.lifesciences.types.Procedure</name>
 			<description>Type representing a procedure.</description>
-			<supertypeName>de.averbis.lifesciences.types.AbstractEntity</supertypeName>
+			<supertypeName>de.averbis.lifesciences.types.LinkedEntity</supertypeName>
 		</typeDescription>
 	</types>
 </typeSystemDescription>
