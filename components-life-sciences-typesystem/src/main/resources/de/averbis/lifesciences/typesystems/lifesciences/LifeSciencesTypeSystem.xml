@@ -24,6 +24,21 @@
         </typeDescription>
 
 		<typeDescription>
+			<name>de.averbis.lifesciences.types.XrefConcept</name>
+			<description>Concept with an added feature for storing an array of xrefs (from umls, for example)</description>
+			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
+			<features>
+                <featureDescription>
+					<name>xrefs</name>
+					<description>Reference to all xrefs associated with this concept.</description>
+					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+					<elementType>uima.cas.String</elementType>
+					<multipleReferencesAllowed>true</multipleReferencesAllowed>
+				</featureDescription>
+            </features>
+        </typeDescription>
+
+		<typeDescription>
 			<name>de.averbis.lifesciences.types.CellLine</name>
 			<description>Type representing a cell line.</description>
 			<supertypeName>de.averbis.lifesciences.types.LinkedEntity</supertypeName>
