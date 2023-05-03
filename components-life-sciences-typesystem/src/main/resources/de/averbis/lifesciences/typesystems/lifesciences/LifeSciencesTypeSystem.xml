@@ -97,6 +97,40 @@
 			<supertypeName>de.averbis.lifesciences.types.LinkedEntity</supertypeName>
 		</typeDescription>
 
+		<!-- PICOS types -->
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.Population</name>
+			<description>
+				Type representing the population of a clinical study, i.e. patients with stage IV cancer,
+				obese children, patient who have undergone chemotherapy, etc.
+			</description>
+			<supertypeName>de.averbis.lifesciences.types.LinkedEntity</supertypeName>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.Intervention_Comparator</name>
+			<description>
+				Type representing the intervention/comparator of a clinical study, i.e. avelumab,
+				excercise, placebo, etc.
+			</description>
+			<supertypeName>de.averbis.lifesciences.types.LinkedEntity</supertypeName>
+			<features>
+				<featureDescription>
+					<name>picoType</name>
+					<description>intervention or comparator</description>
+					<rangeTypeName>uima.cas.String</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.Outcome</name>
+			<description>
+				Type representing the outcome of a study, i.e. cytokine levels,
+				myopia progression, etc.
+			</description>
+			<supertypeName>de.averbis.lifesciences.types.LinkedEntity</supertypeName>
+		</typeDescription>
+
+		<!-- Posology types -->
 		<typeDescription>
 			<name>de.averbis.lifesciences.types.Posology</name>
 			<description>
