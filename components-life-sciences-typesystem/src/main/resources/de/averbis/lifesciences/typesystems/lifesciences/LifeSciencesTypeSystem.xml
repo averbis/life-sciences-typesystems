@@ -6,6 +6,7 @@
 	<vendor>Averbis GmbH</vendor>
 	<imports>
 		<import name="de.averbis.textanalysis.typesystems.AverbisTypeSystem"/>
+		<import name="de.averbis.textanalysis.typesystems.health.MedicationTypeSystem"/>
 	</imports>
 	<types>
 		<typeDescription>
@@ -32,7 +33,6 @@
 					<name>xrefs</name>
 					<description>Reference to all xrefs associated with this concept.</description>
 					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
-					<elementType>uima.cas.String</elementType>
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
             </features>
@@ -95,6 +95,51 @@
 			<name>de.averbis.lifesciences.types.Procedure</name>
 			<description>Type representing a procedure.</description>
 			<supertypeName>de.averbis.lifesciences.types.LinkedEntity</supertypeName>
+		</typeDescription>
+
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.Posology</name>
+			<description>
+                Type representing a posology. Consists of a patient population, i.e. paediatric population,
+				patients with certain conditions, etc. and a medication (drug with a dosage and other
+				characteristics).
+            </description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>medication</name>
+					<description>Medication containing the drug and dosage for the posology.</description>
+					<rangeTypeName>de.averbis.textanalysis.types.health.Medication</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>patientPopulation</name>
+					<description>Type of patients to which the posology applies.</description>
+					<rangeTypeName>de.averbis.lifesciences.types.PatientPopulation</rangeTypeName>
+				</featureDescription>
+			</features>
+		</typeDescription>
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.PatientPopulation</name>
+			<description>
+                Type describing a patient population, i.e. paediatric population,
+				patients with certain conditions, etc.
+            </description>
+			<supertypeName>de.averbis.extraction.types.CoreAnnotation</supertypeName>
+			<features>
+				<featureDescription>
+					<name>age</name>
+					<description>Age range of the patient population.</description>
+					<rangeTypeName>de.averbis.extraction.types.CoreAnnotation</rangeTypeName>
+				</featureDescription>
+				<featureDescription>
+					<name>condition</name>
+					<description>
+						Health conditions which apply to the patient population, i.e.
+						overweight, with diabetes, etc.
+					</description>
+					<rangeTypeName>de.averbis.extraction.types.CoreAnnotation</rangeTypeName>
+				</featureDescription>
+			</features>
 		</typeDescription>
 	</types>
 </typeSystemDescription>

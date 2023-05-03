@@ -26,6 +26,12 @@
 		</dependency>
 
 		<dependency>
+			<groupId>de.averbis.textanalysis</groupId>
+			<artifactId>medication-typesystem</artifactId>
+			<version>${health-typesystems-version}</version>
+		</dependency>
+
+		<dependency>
 			<groupId>org.apache.uima</groupId>
 			<artifactId>uimaj-document-annotation</artifactId>
 			<version>${uima-version}</version>
