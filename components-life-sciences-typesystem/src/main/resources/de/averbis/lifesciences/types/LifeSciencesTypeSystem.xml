@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
-	<name>de.averbis.lifesciences.typesystems.lifesciences.LifeSciencesTypeSystem</name>
+	<name>de.averbis.lifesciences.types.LifeSciencesTypeSystem</name>
 	<description/>
 	<version>${project.version}</version>
 	<vendor>Averbis GmbH</vendor>
@@ -32,7 +32,7 @@
                 <featureDescription>
 					<name>xrefs</name>
 					<description>Reference to all xrefs associated with this concept.</description>
-					<rangeTypeName>uima.cas.FSArray</rangeTypeName>
+			        <rangeTypeName>uima.cas.StringArray</rangeTypeName>
 					<multipleReferencesAllowed>true</multipleReferencesAllowed>
 				</featureDescription>
             </features>

@@ -18,8 +18,11 @@
 	
 	<properties>
 		<uima-version>3.4.1</uima-version>
+		<uimafit-version>3.4.0</uimafit-version>
 		<core-typesystems-version>4.5.0</core-typesystems-version>
 		<health-typesystems-version>3.9.0</health-typesystems-version>
+		<assertj-version>3.24.2</assertj-version>
+		<junit-jupiter-version>5.9.2</junit-jupiter-version>
 	</properties>
 	
 	<licenses>
@@ -60,5 +63,31 @@
 	<modules>
 		<module>components-life-sciences-typesystem</module>
 	</modules>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>${assertj-version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.junit</groupId>
+				<artifactId>junit-bom</artifactId>
+				<version>${junit-jupiter-version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>		
+		</dependencies>
+	</dependencyManagement>
 	
 </project>

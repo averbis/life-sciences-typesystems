@@ -36,6 +36,14 @@
 			<artifactId>uimaj-document-annotation</artifactId>
 			<version>${uima-version}</version>
 		</dependency>
+		
+		<!-- TESTS -->
+		<dependency>
+			<groupId>org.apache.uima</groupId>
+			<artifactId>uimafit-core</artifactId>
+			<version>${uimafit-version}</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 	
 	<build>
@@ -62,7 +70,7 @@
 						</goals>
 						<configuration>
 							<typeSystemIncludes>
-							    <typeSystemInclude>src/main/resources/de/averbis/lifesciences/typesystems/lifesciences/LifeSciencesTypeSystem.xml</typeSystemInclude>
+							    <typeSystemInclude>src/main/resources/de/averbis/lifesciences/types/LifeSciencesTypeSystem.xml</typeSystemInclude>
 							</typeSystemIncludes>
 							<limitToProject>true</limitToProject>
 						</configuration>
