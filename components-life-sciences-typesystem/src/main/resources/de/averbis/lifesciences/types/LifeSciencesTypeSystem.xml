@@ -175,5 +175,11 @@
 				</featureDescription>
 			</features>
 		</typeDescription>
+		<!-- Types for ProteinConceptAnnotator -->
+		<typeDescription>
+			<name>de.averbis.lifesciences.types.ProteinConcept</name>
+			<description />
+			<supertypeName>de.averbis.extraction.types.Concept</supertypeName>
+		</typeDescription>
 	</types>
 </typeSystemDescription>
