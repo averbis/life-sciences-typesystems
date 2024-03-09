@@ -19,8 +19,8 @@
 	<properties>
 		<uima-version>3.4.1</uima-version>
 		<uimafit-version>3.4.0</uimafit-version>
-		<core-typesystems-version>4.5.0</core-typesystems-version>
-		<health-typesystems-version>3.9.0</health-typesystems-version>
+		<core-typesystems-version>4.7.0</core-typesystems-version>
+		<health-typesystems-version>3.14.0</health-typesystems-version>
 		<assertj-version>3.24.2</assertj-version>
 		<junit-jupiter-version>5.9.2</junit-jupiter-version>
 	</properties>

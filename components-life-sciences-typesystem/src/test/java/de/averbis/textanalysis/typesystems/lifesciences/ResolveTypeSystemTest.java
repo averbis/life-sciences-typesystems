@@ -31,7 +31,7 @@ public class ResolveTypeSystemTest {
 		for (TypeDescription t : tsd.getTypes()) {
 			System.out.println("Type: " + t);
 		}
-		assertThat(tsd.getTypes()).hasSize(123);
+		assertThat(tsd.getTypes()).hasSize(128);
 	}
 	
 	@Test
@@ -40,6 +40,6 @@ public class ResolveTypeSystemTest {
 		TypeSystemDescription tsd = TypeSystemDescriptionFactory.createTypeSystemDescription(
 				"de.averbis.lifesciences.types.LifeSciencesTypeSystem");
 		tsd.resolveImports();
-		assertThat(tsd.getTypes()).hasSize(123);
+		assertThat(tsd.getTypes()).hasSize(128);
 	}
 }
