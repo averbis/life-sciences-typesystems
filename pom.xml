@@ -17,8 +17,8 @@
 	<packaging>pom</packaging>
 	
 	<properties>
-		<uima-version>3.4.1</uima-version>
-		<uimafit-version>3.4.0</uimafit-version>
+		<uima-version>3.5.0</uima-version>
+		<uimafit-version>3.5.0</uimafit-version>
 		<core-typesystems-version>4.7.0</core-typesystems-version>
 		<health-typesystems-version>3.14.0</health-typesystems-version>
 		<assertj-version>3.24.2</assertj-version>
