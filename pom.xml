@@ -2,7 +2,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>life-sciences-typesystems</artifactId>
-    <version>0.4.0-SNAPSHOT</version>
+    <version>0.3.2</version>
 
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>The UIMA type systems of the Averbis life sciences components</description>
@@ -45,7 +45,7 @@
 		<connection>scm:git:git://github.com/averbis/life-sciences-typesystems</connection>
 		<developerConnection>scm:git:git@github.com:averbis/life-sciences-typesystems.git</developerConnection>
 		<url>https://github.com/averbis/life-sciences-typesystems</url>
-		<tag>HEAD</tag>
+		<tag>life-sciences-typesystems-0.3.2</tag>
 	</scm>
 	
 	<distributionManagement>
