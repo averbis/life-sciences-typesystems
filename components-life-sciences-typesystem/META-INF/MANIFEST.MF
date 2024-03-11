@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1710020936272
+Bnd-LastModified: 1710144367313
 Build-Jdk-Spec: 17
 Bundle-Description: The type system of the life sciences components
 Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
@@ -8,12 +8,12 @@ Bundle-Name: components-life-sciences-typesystem
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-SymbolicName: de.averbis.textanalysis.components-life-sciences-ty
  pesystem
-Bundle-Version: 0.3.0.SNAPSHOT
+Bundle-Version: 0.4.0.SNAPSHOT
 Created-By: Apache Maven Bundle Plugin 5.1.6
 Export-Package: de.averbis.lifesciences.types;uses:="de.averbis.extracti
  on.types,de.averbis.textanalysis.types.health,org.apache.uima.cas.impl,
  org.apache.uima.jcas,org.apache.uima.jcas.cas,org.apache.uima.resource.
- metadata,org.apache.uima.spi";version="0.3.0"
+ metadata,org.apache.uima.spi";version="0.4.0"
 Import-Package: 
  de.averbis.extraction.types;version="[4.7,5)",
  de.averbis.textanalysis.types.health;version="[3.14,4)",
