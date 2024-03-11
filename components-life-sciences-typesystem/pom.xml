@@ -86,6 +86,8 @@
 						<Import-Package>
 							de.averbis.extraction.types,
 							de.averbis.textanalysis.types.health,
+							de.averbis.textanalysis.types.numericvalue,
+							de.averbis.textanalysis.types.measurement,
 							*
 						</Import-Package>
 					</instructions>
