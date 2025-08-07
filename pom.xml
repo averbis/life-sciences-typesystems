@@ -1,28 +1,30 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>life-sciences-typesystems</artifactId>
-    <version>0.4.0-SNAPSHOT</version>
-
-	<name>${project.groupId}:${project.artifactId}</name>
-	<description>The UIMA type systems of the Averbis life sciences components</description>
-	<url>https://github.com/averbis/life-sciences-typesystems</url>
 
 	<parent>
 		<groupId>de.averbis.textanalysis</groupId>
 		<artifactId>parent-pom-typesystems</artifactId>
-		<version>4.1.0</version>
+		<version>4.3.0</version>
 	</parent>
 
+	<artifactId>life-sciences-typesystems</artifactId>
+	<version>0.4.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
+
+	<name>Averbis Life Sciences Type Systems :: Root</name>
+	<description>The UIMA type systems of the Averbis life sciences components</description>
+	<url>https://github.com/averbis/life-sciences-typesystems</url>
 	
 	<properties>
-		<uima-version>3.5.0</uima-version>
+		<bnd-annotation-version>7.1.0</bnd-annotation-version>
+		<uima-version>3.6.0</uima-version>
 		<uimafit-version>3.5.0</uimafit-version>
-		<core-typesystems-version>4.7.0</core-typesystems-version>
-		<health-typesystems-version>3.14.0</health-typesystems-version>
-		<assertj-version>3.24.2</assertj-version>
-		<junit-jupiter-version>5.9.2</junit-jupiter-version>
+		<core-typesystems-version>4.12.0</core-typesystems-version>
+		<health-typesystems-version>3.31.0</health-typesystems-version>
+		<assertj-version>3.27.4</assertj-version>
+		<slf4j-version>2.0.17</slf4j-version>
+		<junit-jupiter-version>5.11.4</junit-jupiter-version>
+		<junit-platform-version>1.11.4</junit-platform-version>
 	</properties>
 	
 	<licenses>
@@ -32,22 +34,23 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-	
+
 	<developers>
-	    <developer>
+		<developer>
+			<id>averbis</id>
 			<email>info@averbis.com</email>
 			<organization>Averbis</organization>
 			<organizationUrl>https://averbis.com/</organizationUrl>
 		</developer>
 	</developers>
-	
+
 	<scm>
 		<connection>scm:git:git://github.com/averbis/life-sciences-typesystems</connection>
 		<developerConnection>scm:git:git@github.com:averbis/life-sciences-typesystems.git</developerConnection>
 		<url>https://github.com/averbis/life-sciences-typesystems</url>
 		<tag>HEAD</tag>
 	</scm>
-	
+
 	<distributionManagement>
 		<repository>
 			<id>ossrh</id>
@@ -59,6 +62,39 @@
 			<url>https://maven.pkg.github.com/averbis/life-sciences-typesystems</url>
 		</snapshotRepository>
 	</distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>github-parent-pom-typesystems</id>
+			<url>https://maven.pkg.github.com/averbis/parent-pom-typesystems</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>github-core-typesystems</id>
+			<url>https://maven.pkg.github.com/averbis/core-typesystems</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>github-health-typesystems</id>
+			<url>https://maven.pkg.github.com/averbis/health-typesystems</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 
 	<modules>
 		<module>components-life-sciences-typesystem</module>
@@ -86,8 +122,88 @@
 				<version>${junit-jupiter-version}</version>
 				<type>pom</type>
 				<scope>import</scope>
-			</dependency>		
+			</dependency>
+			<dependency>
+				<groupId>org.apache.uima</groupId>
+				<artifactId>uimaj-bom</artifactId>
+				<version>${uima-version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.assertj</groupId>
+				<artifactId>assertj-bom</artifactId>
+				<version>${assertj-version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-bom</artifactId>
+				<version>${slf4j-version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>biz.aQute.bnd.annotation</artifactId>
+				<version>${bnd-annotation-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.averbis.textanalysis</groupId>
+				<artifactId>core-typesystems-bom</artifactId>
+				<version>${core-typesystems-version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>de.averbis.textanalysis</groupId>
+				<artifactId>health-typesystems-bom</artifactId>
+				<version>${health-typesystems-version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<dependencies>
+					<dependency>
+						<groupId>org.junit.jupiter</groupId>
+						<artifactId>junit-jupiter-engine</artifactId>
+						<version>${junit-jupiter-version}</version>
+					</dependency>
+					<dependency>
+						<groupId>org.junit.platform</groupId>
+						<artifactId>junit-platform-commons</artifactId>
+						<version>${junit-platform-version}</version>
+					</dependency>
+					<dependency>
+						<groupId>org.junit.platform</groupId>
+						<artifactId>junit-platform-engine</artifactId>
+						<version>${junit-platform-version}</version>
+					</dependency>
+					<dependency>
+						<groupId>org.junit.platform</groupId>
+						<artifactId>junit-platform-launcher</artifactId>
+						<version>${junit-platform-version}</version>
+					</dependency>
+					<dependency>
+						<groupId>org.junit.platform</groupId>
+						<artifactId>junit-platform-suite-engine</artifactId>
+						<version>${junit-platform-version}</version>
+					</dependency>
+					<dependency>
+						<groupId>org.junit.platform</groupId>
+						<artifactId>junit-platform-suite-api</artifactId>
+						<version>${junit-platform-version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
 </project>
